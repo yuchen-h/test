@@ -1,0 +1,27 @@
+@mixin font($font_size: 16px,$letter_spacing: 1px,$font_color: #000)
+  font-size: $font_size
+  letter-spacing: $letter_spacing
+  color: $font_color  
+  
+
+@mixin block($w: 50px,$h: 50px,$block_color: black)
+  width: $w
+  height: $h
+  border: 1px solid $block_color
+  border-radius: 10px
+
+.block1
+  +block(70px,70px)
+  +font()
+  
+.block2
+  +block(100px,100px,red)
+  +font(20px,5px,#f00)
+.block3
+  +block(200px,200px,green)
+  +font(30px,10px,green)
+h2
+  font-size: 10px
+  letter-spacing: 10px
+
+
